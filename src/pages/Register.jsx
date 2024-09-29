@@ -23,15 +23,20 @@ function Register() {
         alert("username yaroqsiz")
         usernameRef.current.focus()
         usernameRef.current.style.outlineColor = 'red'
+        return false
       }
       if (!validateEmail(emailRef.current.value)) {
         alert('email yaroqsiz');
         emailRef.current.focus()
         emailRef.current.style.outlineColor = 'red'
+        return false
       }
 
       if (passwordRef.current.value != reppasswordRef.current.value) {
         alert('parolda muammo bor')
+        reppasswordRef.current.focus()
+        reppasswordRef.current.style.outlineColor = 'red'
+        return false
       }
       return true
     }
